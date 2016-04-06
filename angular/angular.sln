@@ -21,7 +21,7 @@ Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "WebSite", "http://localhost
 		Release.AspNetCompiler.ForceOverwrite = "true"
 		Release.AspNetCompiler.FixedNames = "false"
 		Release.AspNetCompiler.Debug = "False"
-		SlnRelativePath = "G:\java\repositorios\webGit_local\Learning\angular\WebSite\"
+		SlnRelativePath = "WebSite\"
 	EndProjectSection
 EndProject
 Global
