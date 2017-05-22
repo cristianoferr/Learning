@@ -1,2 +1,0 @@
-Ok!
-<? echo "Php funciona";?>
