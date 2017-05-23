@@ -1,0 +1,8 @@
+https://github.com/angular/material-start/tree/es6-tutorial
+
+git checkout es6-tutorial
+npm install jspm live-server -g
+jspm update
+live-server --open=app
+
+jspm install angular-material@master
