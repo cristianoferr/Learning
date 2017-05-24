@@ -1,4 +1,3 @@
 https://github.com/angular/material-start/tree/typescript
 
-npm install
-live-server --open=app
+npm install live-server --open=app

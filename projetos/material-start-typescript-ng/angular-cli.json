@@ -1,7 +1,7 @@
 {
   "project": {
     "version": "1.0.0-beta.28.3",
-    "name": "material2-do-novo"
+    "name": "material-start-ng"
   },
   "apps": [
     {
@@ -15,7 +15,7 @@
       "main": "main.ts",
       "polyfills": "polyfills.ts",
       "test": "test.ts",
-      "tsconfig": "../e2e/tsconfig.json",
+      "tsconfig": "tsconfig.json",
       "prefix": "app",
       "styles": [
         "styles.css"
@@ -35,12 +35,12 @@
   },
   "lint": [
     {
-      "files": "app/src/**/*.ts",
-      "project": "../e2e/tsconfig.json"
+      "files": "src/**/*.ts",
+      "project": "src/tsconfig.json"
     },
     {
       "files": "e2e/**/*.ts",
-      "project": "../e2e/tsconfig.json"
+      "project": "e2e/tsconfig.json"
     }
   ],
   "test": {

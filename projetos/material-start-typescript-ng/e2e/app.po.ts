@@ -1,6 +1,6 @@
 import { browser, element, by } from 'protractor';
 
-export class Material2DoNovoPage {
+export class MaterialStartNgPage {
   navigateTo() {
     return browser.get('/');
   }

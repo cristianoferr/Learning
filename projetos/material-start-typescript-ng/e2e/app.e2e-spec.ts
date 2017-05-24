@@ -1,10 +1,10 @@
-import { Material2DoNovoPage } from './app.po';
+import { MaterialStartNgPage } from './app.po';
 
-describe('material2-do-novo App', function() {
-  let page: Material2DoNovoPage;
+describe('material-start-ng App', function() {
+  let page: MaterialStartNgPage;
 
   beforeEach(() => {
-    page = new Material2DoNovoPage();
+    page = new MaterialStartNgPage();
   });
 
   it('should display message saying app works', () => {
