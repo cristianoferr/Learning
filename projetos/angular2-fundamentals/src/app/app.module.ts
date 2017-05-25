@@ -4,17 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { MailService } from './mail.service';
+import { SimpleFormComponent } from './simple-form/simple-form.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SimpleFormComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  //Versão sem inject
+  //providers: [MailService],
+  //Versão com inject
+  providers: [{provide:'mail', useClass:MailService}],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
