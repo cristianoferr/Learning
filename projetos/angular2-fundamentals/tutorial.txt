@@ -1,0 +1,4 @@
+https://egghead.io/lessons/angular-2-say-hello-world-to-angular-2 
+
+Comandos a rodar:
+ng generate component simple-form -it -is 
