@@ -20,7 +20,10 @@ import { SimpleFormComponent } from './simple-form/simple-form.component';
   //Versão sem inject
   //providers: [MailService],
   //Versão com inject
-  providers: [{provide:'mail', useClass:MailService}],
+  providers: [{provide:'mail', useClass:MailService},
+  {provide:'api',usevalue:'http://localhost:3000/'}
+  ],
+  
   bootstrap: [AppComponent]
 })
 export class AppModule { }

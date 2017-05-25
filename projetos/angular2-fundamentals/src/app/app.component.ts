@@ -7,6 +7,8 @@ import { Component } from '@angular/core';
   templatetye:`<div>
   <app-simple-form></app-simple-form>
   {{mail.message}}
+  <hr>
+  {{api}}
   </div>
   `
 })
@@ -16,5 +18,9 @@ export class AppComponent {
   //Versão sem inject
   //construct(private mail:MailService){}
   //Versão com inject:
-  construct(@Inject('mail') private mail){}
+  construct(@Inject('mail') private mail,
+  @Inject('api') private api){
+
+  }
 }
+https://egghead.io/lessons/angular-2-provide-and-share-values-with-angular-2-dependency-injection
