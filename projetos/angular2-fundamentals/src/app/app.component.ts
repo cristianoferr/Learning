@@ -1,26 +1,38 @@
-import { Component } from '@angular/core';
+import { Component, Inject } from '@angular/core';
 //Desnecessário com inject
 //import { MailService } from './mail.service';
 
 @Component({
   selector: 'app-root',
-  templatetye:`<div>
-  <app-simple-form></app-simple-form>
-  {{mail.message}}
-  <hr>
-  {{api}}
+  template: `<div>
+  <ul>
+    <li *ngFor="let message of mail.messages">{{message.text}}</li>
+  </ul>
+  <app-simple-form *ngFor="let message of mail.messages"
+  [inputMessage]="message.text" (update)="onUpdate(message.id,$event.text)"
+  >
+
+  </app-simple-form>
+
   </div>
-  `
+  `,
+  styles: [`
+  app-simple-form{
+    margin-bottom:10px;
+  }
+  `]
 })
 export class AppComponent {
   title = 'Let´s get started!';
 
+  onUpdate(id, text) {
+    this.mail.update(id, text);
+  }
+
   //Versão sem inject
-  //construct(private mail:MailService){}
+  //constructor(private mail:MailService){}
   //Versão com inject:
-  construct(@Inject('mail') private mail,
-  @Inject('api') private api){
+  constructor( @Inject('mail') private mail) {
 
   }
 }
-https://egghead.io/lessons/angular-2-provide-and-share-values-with-angular-2-dependency-injection
