@@ -1,23 +1,26 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
+  // selector: '[app-servers]',
+  // selector: '.app-servers',
   selector: 'app-servers',
+  // template: `
+  //   <app-server></app-server>
+  //   <app-server></app-server>`,
   templateUrl: './servers.component.html',
   styleUrls: ['./servers.component.css']
 })
 export class ServersComponent implements OnInit {
-  allowNewServer: boolean = false;
-  serverCreationStatus = "No Server was created";
-  serverName: string = "TestServer";
-  serverCreated: boolean = false;
-
+  allowNewServer = false;
+  serverCreationStatus = 'No server was created!';
+  serverName = 'Testserver';
+  serverCreated = false;
   servers = ['Testserver', 'Testserver 2'];
 
   constructor() {
-    setTimeout(
-      () => {
-        this.allowNewServer = !this.allowNewServer;
-      }, 2000);
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
   }
 
   ngOnInit() {
@@ -26,13 +29,10 @@ export class ServersComponent implements OnInit {
   onCreateServer() {
     this.serverCreated = true;
     this.servers.push(this.serverName);
-    this.serverCreationStatus = "Server was created! Name is: " + this.serverName;
+    this.serverCreationStatus = 'Server was created! Name is ' + this.serverName;
   }
 
-  //one way binding
   onUpdateServerName(event: Event) {
-    console.log(event);
     this.serverName = (<HTMLInputElement>event.target).value;
   }
-
 }
