@@ -1,4 +1,7 @@
-h3 {
-    color: darkblue;
+.container {
+  margin-top: 30px;
 }
-p{margin: 0,0,10px;}
+
+p {
+  color: blue;
+}
